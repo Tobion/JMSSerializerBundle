@@ -142,6 +142,7 @@ class Configuration implements ConfigurationInterface
                         ->defaultTrue()
                     ->end()
                     ->arrayNode('directories')
+                        ->useAttributeAsKey('name')
                         ->prototype('array')
                             ->children()
                                 ->scalarNode('path')->isRequired()->end()
